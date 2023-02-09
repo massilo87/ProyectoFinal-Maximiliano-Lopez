@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "nombre": "Maceta chica",
+        "precio": 200,
+        "img": "./img/maceta.jpeg"
+    },
+    {
+        "id": 2,
+        "nombre": "Maceta grande",
+        "precio": 400,
+        "img": "./img/maceta.jpeg"
+    },
+    {
+        "id": 3,
+        "nombre": "Lampara chica",
+        "precio": 800,
+        "img": "./img/lampara.jpeg"
+    },
+    {
+        "id": 4,
+        "nombre": "Lampara grande",
+        "precio": 1500,
+        "img": "./img/lampara.jpeg"
+    },
+    {
+        "id": 5,
+        "nombre": "Corporeas chicas",
+        "precio": 2000,
+        "img": "./img/corporeas.jpeg"
+    },
+    {
+        "id": 6,
+        "nombre": "Corporeas grandes",
+        "precio": 2800,
+        "img": "./img/corporeas.jpeg"
+    },
+    {
+        "id": 7,
+        "nombre": "Tags chicos",
+        "precio": 300,
+        "img": "./img/tags.jpeg"
+    },
+    {
+        "id": 8,
+        "nombre": "Tags grandes",
+        "precio": 500,
+        "img": "./img/tags.jpeg"
+    }
+
+]

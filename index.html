@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu | Imprimimos tus ideas</title>
+    <meta name="description"
+        content="Web site independiente dedicado a la impresion de piezas 3d en PLA. Modelamos, imprimimos y asesoramos sobre equipos de impresion 3d de filamento.">
+    <meta name="keywords" content="imresion 3d, impresion filamento, PLA, modelado, versatilidad, bajo costo">
+    <link rel="shortcut icon" href="./img/logo7.png" type="image/x-icon">
+    <link rel="stylesheet" href="./sass/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <div id="containerHome">
+        <header class="header">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="offset-lg-1 container-fluid">
+                    <a class="navbar-brand" href="./index.html"><img src="./img/logo9.png" alt="logo" class="logolulu"></a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <main class="introHome col-12 text-center">
+                    <h1 class="tituloHome animate__animated animate__rubberBand">Vos lo imaginas, nosotros lo hacemos
+                        realidad</h1>
+                </main>
+
+                <section class="sectionHome col-12">
+                    <h2>¿Por qué optar por la impresión 3d?</h2>
+                </section>
+            </div>
+
+        </div>
+        <div class="container contenedorImpresion">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/3d_tmb.jpg" class="card-img-top" alt="versatil">
+                        <div class="card-body">
+                            <h5 class="card-title">Versatilidad</h5>
+                            <p class="card-text">La versatilidad de una impresora permite crear una gran variedad de
+                                productos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/modelado.jpg" class="card-img-top" alt="modelo">
+                        <div class="card-body">
+                            <h5 class="card-title">Modelado</h5>
+                            <p class="card-text">Se pueden modelar un sin fin de prototipos con facilidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/piggy.jpg" class="card-img-top" alt="costo">
+                        <div class="card-body">
+                            <h5 class="card-title">Bajo costo</h5>
+                            <p class="card-text">Ofrece un menor costo de producción en comparación a otros métodos de
+                                fabricación.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="titularProductos text-center">Nuestros Productos<h2>
+
+                <section id="contenedorProductos" class="productos">
+                    <!--se carga desde JS-->
+                </section>
+
+                <h2 class="titularCarrito text-center">Carrito de compras</h2>
+
+                <div id="carritoProductosSeleccionados">
+                    <!--se carga desde JS-->
+                </div>
+
+                <div class="carritoAcciones">
+                    <div class="carritoAccionesIzquierda">
+                        <button id="accionesVaciar" class="carritoAccionesVaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carritoAccionesDerecha">
+                        <div class="carritoAccionesTotal">
+                            <p>Total:</p>
+                            <p id="total"></p>
+                        </div>
+                        <button id="accionesComprar" class="carritoAccionesComprar">Finalizar compra</button>
+                    </div>
+                </div>
+
+                <footer class="bg-light text-center text-white">
+
+                    <div class="container p-4 pb-0">
+                       
+                        <section class="mb-4">
+
+                            <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
+                                href="https://www.facebook.com/" role="button" target="blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+
+                            <a class="btn text-white btn-floating m-1" style="background-color: #55acee;"
+                                href="https://twitter.com/?lang=es" role="button" target="blank"><i
+                                    class="fab fa-twitter"></i></a>
+
+                            <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;"
+                                href="https://www.google.com.uy/" role="button" target="blank"><i
+                                    class="fab fa-google"></i></a>
+
+                            <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;"
+                                href="https://www.instagram.com/" role="button" target="blank"><i
+                                    class="fab fa-instagram"></i></a>
+
+                            <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;"
+                                href="https://uy.linkedin.com/" role="button" target="blank"><i
+                                    class="fab fa-linkedin-in"></i>
+                            </a>
+
+                        </section>
+                    </div>
+
+                    <div class="ayuda text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                        <a class="text-white offset-4" href="#/">© 2023 <span>Proyecto de </span>Maximiliano
+                            Lopez</a>
+                        <a href="#" class="offset-lg-4 ayuda"><img src="./img/pregunta.png" alt="ayuda"></a>
+                    </div>
+
+                </footer>
+
+
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./JS/impresion.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+
+</html>

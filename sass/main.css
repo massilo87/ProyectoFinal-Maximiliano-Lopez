@@ -1,0 +1,239 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* -------------------Globales------------------------ */
+body {
+  background-image: url("../img/fondito3.png");
+  background-repeat: repeat;
+}
+
+.logolulu {
+  height: 100px;
+  width: 150px;
+}
+
+.ayuda img {
+  height: 30px;
+}
+
+.nav-link {
+  border-radius: 20px;
+}
+
+#containerHome {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 2fr 2fr auto auto auto auto auto;
+  gap: 15px;
+  grid-template-areas: "encabezado" "titular" "titular2" "impresion" "productos" "titular3" "carritoConProductos" "carritoAcciones" "pie";
+}
+#containerHome .header {
+  grid-area: encabezado;
+}
+#containerHome .introHome {
+  grid-area: titular;
+  text-align: center;
+}
+#containerHome .introHome h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(250, 147, 12);
+}
+#containerHome .sectionHome {
+  grid-area: titular2;
+  text-align: center;
+  height: 400px;
+}
+#containerHome .sectionHome::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  background: url("../img/Impresion-3D.jpeg"), linear-gradient(319deg, #f80202 0%, #f87102 57.66%, #fff23d 100%);
+  background-blend-mode: multiply;
+  background-position: center;
+  opacity: 0.7;
+  left: 0;
+}
+#containerHome .sectionHome h2 {
+  margin-top: 1%;
+  color: rgb(255, 255, 255);
+  position: relative;
+  top: 42%;
+  transition: all 0.5s;
+}
+#containerHome .sectionHome h2:hover {
+  text-shadow: black 0.2em 0.2em 5px;
+  zoom: 101%;
+}
+#containerHome .contenedorimpresion {
+  grid-area: impresion;
+}
+#containerHome .titularProductos {
+  color: rgb(250, 147, 12);
+}
+#containerHome .productos {
+  grid-area: productos;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: center;
+  color: rgb(255, 102, 0);
+}
+#containerHome .productos .itemProducto {
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s;
+}
+#containerHome .productos .itemProducto:hover {
+  background-color: rgb(189, 189, 189);
+  border-radius: 1rem;
+}
+#containerHome .productos .itemProducto p {
+  font-size: 1.2rem;
+}
+#containerHome .productos .itemProducto img {
+  width: 15rem;
+  height: 10rem;
+  border-radius: 1rem;
+}
+#containerHome .productos .itemProducto .agregar {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: rgb(255, 102, 0);
+}
+#containerHome .productos .itemProducto .agregar:hover {
+  background-color: rgb(250, 147, 12);
+  color: rgb(87, 86, 86);
+}
+#containerHome .titularCarrito {
+  grid-area: titular3;
+  color: rgb(250, 147, 12);
+}
+#containerHome .carritoProductosSeleccionados {
+  grid-area: carritoConProductos;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#containerHome .carritoProductoElegido {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  background-color: rgb(230, 229, 229);
+  color: rgb(255, 102, 0);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  padding-right: 1.5rem;
+}
+#containerHome .carritoProductoElegido img {
+  width: 6rem;
+  border-radius: 1rem;
+}
+#containerHome .carritoProductoElegido .carritoProductoEliminar {
+  border: 0;
+  background-color: transparent;
+  color: red;
+}
+#containerHome .carritoAcciones {
+  grid-area: carritoAcciones;
+  display: flex;
+  justify-content: space-between;
+}
+#containerHome .carritoAcciones .carritoAccionesIzquierda .carritoAccionesVaciar {
+  border: 0;
+  background-color: rgb(230, 229, 229);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  color: rgb(255, 102, 0);
+  font-weight: 700;
+}
+#containerHome .carritoAcciones .carritoAccionesDerecha {
+  display: flex;
+}
+#containerHome .carritoAcciones .carritoAccionesDerecha .carritoAccionesTotal {
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 229, 229);
+  padding: 1rem;
+  text-transform: uppercase;
+  color: rgb(255, 102, 0);
+  font-weight: 700;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  gap: 1rem;
+}
+#containerHome .carritoAcciones .carritoAccionesDerecha .carritoAccionesComprar {
+  display: flex;
+  border: 0;
+  background-color: rgb(255, 102, 0);
+  padding: 1rem;
+  text-transform: uppercase;
+  color: rgb(230, 229, 229);
+  font-weight: 700;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+#containerHome footer {
+  grid-area: pie;
+}
+
+@media (max-width: 1440px) {
+  #containerProductos .productos img {
+    width: 250px;
+    height: 180px;
+  }
+  #containerPromociones .introPromociones img {
+    width: 310px;
+    padding: 1px;
+  }
+}
+@media (max-width: 1200px) {
+  #containerProductos .productos img {
+    width: 230px;
+    height: 160px;
+  }
+  .ayuda img {
+    height: 20px;
+  }
+  .ayuda a span {
+    display: none;
+  }
+  #containerPromociones .introPromociones img {
+    width: 285px;
+    padding: 5px;
+  }
+}
+@media (max-width: 768px) {
+  #containerProductos .productos img {
+    width: 225px;
+    height: 155px;
+  }
+  #containerPromociones .introPromociones img {
+    width: 250px;
+    padding: 5px;
+  }
+  #containerProductos .tituloProductos {
+    justify-content: center;
+    align-items: start;
+  }
+  html {
+    font-size: 75%;
+  }
+}
+@media (min-width: 1200px) {
+  .nav-link:hover {
+    background-color: rgba(250, 147, 12, 0.6);
+  }
+}/*# sourceMappingURL=main.css.map */

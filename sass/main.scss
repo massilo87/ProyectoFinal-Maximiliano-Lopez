@@ -1,0 +1,41 @@
+@import "variables";
+
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* -------------------Globales------------------------ */
+
+
+
+body {
+    background-image: url("../img/fondito3.png");
+    background-repeat: repeat;
+}
+
+.logolulu {
+    height: 100px;
+    width: 150px;
+}
+
+.ayuda img {
+    height: 30px;
+}
+
+.nav-link {
+    border-radius: 20px;
+}
+
+@mixin titularPrincipal {
+    font-size: 2rem;
+    font-weight: 800;
+    color: $colorPrincipal;
+}
+
+@import "home";
+@import "mediaQueries";
