@@ -6,26 +6,6 @@ const btnVaciar = document.querySelector("#accionesVaciar");
 const carritoAccionesTotal = document.querySelector("#total");
 const botonFinalizar = document.querySelector("#accionesComprar");
 
-///Finalizar Compra
-
-const finalizaCompra = () => {
-    let totalCalculado = actualizarTotal();
-
-    if (carrito.length === 0) {
-        Swal.fire(
-            "El carro está vacío",
-            "Recorre la tienda y elige tus próximas impresiones",
-            "error"
-        );
-    } else {
-        Swal.fire(
-            "Compra realizada correctamente",
-            "El importe total de tu compra es de $" + totalCalculado,
-            "success"
-        );
-    }
-    vaciarCarrito();
-};
 
 ///Eventos
 
@@ -36,11 +16,11 @@ botonFinalizar.addEventListener("click", finalizaCompra);
 
 let impresiones = [];
 
-///Carrito de prooductos
+///Carrito de productos
 
 let carrito = [];
 
-///Carga de coontenido
+///Carga de contenido
 
 window.addEventListener('DOMContentLoaded', () => {
     carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -48,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-///Peticion de datos
+///Petición de datos
 
 fetch("./js/impresion.json")
     .then(response => response.json())
@@ -96,7 +76,7 @@ function agregarAlCarrito(e) {
         position: "right",
         stopOnFocus: true,
         style: {
-            background: "linear-gradient(to right, #f87102 57.66%, #fff23d 100%)",
+            background: "linear-gradient(to right, #f87102, #fff23d)",
             borderRadius: "1rem",
         },
         onClick: function () { }
@@ -211,17 +191,14 @@ function alertaDeVaciado() {
             text: 'Se borraran todos los productos seleccionados!',
             icon: 'warning',
             showCancelButton: true,
-            //confirmButtonColor: '#f87102',
-            //cancelButtonColor: '#fff23d',
             cancelButtonText: 'No',
             confirmButtonText: 'Si'
         }).then((result) => {
             if (result.isConfirmed) {
                 Swal.fire({
                     title: 'Eliminado',
-                    text: 'Su carrito esta vacio!',
+                    text: 'Su carrito esta vacío!',
                     icon: 'success',
-                    //confirmButtonColor: '#fff23d',
                     confirmButtonText: 'Aceptar'
                 })
                 vaciarCarrito();
@@ -240,3 +217,24 @@ function actualizarTotal() {
     return (totalCalculado)
 
 }
+
+///Finalizar Compra
+
+function finalizaCompra() {
+    let totalCalculado = actualizarTotal();
+
+    if (carrito.length === 0) {
+        Swal.fire(
+            "El carro está vacío",
+            "Recorre la tienda y elige tus próximas impresiones",
+            "error"
+        );
+    } else {
+        Swal.fire(
+            "Compra realizada correctamente",
+            "El importe total de tu compra es de $" + totalCalculado,
+            "success"
+        );
+    }
+    vaciarCarrito();
+};
